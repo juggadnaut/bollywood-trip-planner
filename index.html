@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bollywood Trip Planner — Your Bollywood Moment</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">Bollywood Trip Planner</h1>
+    <p class="subtitle">Find where your favourite movie moments were filmed — plan your trip, scene-by-scene.</p>
+  </header>
+
+  <main class="container">
+    <section class="search-card">
+      <label for="city-input">Your Bollywood Moment — enter a city (e.g. Udaipur, Jaipur, Mumbai):</label>
+      <input id="city-input" placeholder="Type a city like Udaipur" />
+      <div class="row">
+        <button id="search-btn" class="btn">Search</button>
+        <button id="show-sample" class="btn alt">Show All Cities</button>
+      </div>
+      <p class="hint">Tip: search by **city/region** (e.g. <em>Udaipur</em>), not state.</p>
+      <ul id="city-suggestions" class="suggestions"></ul>
+    </section>
+
+    <section class="sample-list" id="sample-list"></section>
+  </main>
+
+  <footer class="footer">Made with❤️ — edit the Google Sheet or JSON to add more places</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
