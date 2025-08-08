@@ -1,35 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bollywood Trip Planner — Your Bollywood Moment</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollywood Trip Planner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <h1 class="logo">Bollywood Trip Planner</h1>
-    <p class="subtitle">Find where your favourite movie moments were filmed — plan your trip, scene-by-scene.</p>
-  </header>
+    <h1>Bollywood Trip Planner</h1>
+    <p>Search for a city to see its Bollywood connections</p>
 
-  <main class="container">
-    <section class="search-card">
-      <label for="city-input">Your Bollywood Moment — enter a city (e.g. Udaipur, Jaipur, Mumbai):</label>
-      <input id="city-input" placeholder="Type a city like Udaipur" />
-      <div class="row">
-        <button id="search-btn" class="btn">Search</button>
-        <button id="show-sample" class="btn alt">Show All Cities</button>
-      </div>
-      <p class="hint">Tip: search by **city/region** (e.g. <em>Udaipur</em>), not state.</p>
-      <ul id="city-suggestions" class="suggestions"></ul>
-    </section>
+    <input type="text" id="searchBox" placeholder="Type a city...">
+    <button onclick="searchCity()">Search</button>
 
-    <section class="sample-list" id="sample-list"></section>
-  </main>
+    <div id="searchResults"></div>
 
-  <footer class="footer">Made with❤️ — edit the Google Sheet or JSON to add more places</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
