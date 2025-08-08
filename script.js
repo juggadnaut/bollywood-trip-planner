@@ -58,7 +58,7 @@ const movieLocations = [
     }
 ];
 
-// Handle search
+// Search button click
 function handleSearch() {
     const query = document.getElementById("searchBox").value.trim().toLowerCase();
     const foundCity = movieLocations.find(
@@ -66,7 +66,6 @@ function handleSearch() {
     );
 
     if (foundCity) {
-        // Save results to local storage
         localStorage.setItem("searchResults", JSON.stringify(foundCity));
         window.location.href = "page3.html";
     } else {
@@ -94,3 +93,10 @@ function loadResults() {
 
     document.getElementById("results").innerHTML = html;
 }
+
+// Auto-run loadResults() only if on page3.html
+window.onload = function () {
+    if (document.getElementById("results")) {
+        loadResults();
+    }
+};
